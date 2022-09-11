@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "management.security.enabled",
+      "type": "java.lang.String",
+      "description": "Description for management.security.enabled."
+    },
+    {
+      "name": "spring.datasource.driver-class-name.url",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.driver-class-name.url."
+    }
+  ] }

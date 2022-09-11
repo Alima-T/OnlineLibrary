@@ -1,0 +1,190 @@
+-- DELETE FROM user_roles;
+-- DELETE FROM meals;
+-- DELETE FROM users;
+-- ALTER SEQUENCE global_seq RESTART WITH 100000;
+--
+-- INSERT INTO users (name, email, password)
+-- VALUES ('User', 'user@yandex.ru', 'password'),
+--        ('Admin', 'admin@gmail.com', 'admin'),
+--        ('Guest', 'guest@gmail.com', 'guest');
+--
+-- INSERT INTO user_roles (role, user_id)
+-- VALUES ('USER', 100000),
+--        ('ADMIN', 100001);
+--
+-- INSERT INTO book (date_time, description, calories, user_id)
+-- --
+-- -- Table structure for table `book_author`
+-- --
+--
+-- DROP TABLE IF EXISTS `book_author`;
+-- /*!40101 SET @saved_cs_client     = @@character_set_client */;
+-- /*!50503 SET character_set_client = utf8mb4 */;
+-- CREATE TABLE `book_author` (
+--                                `book_id` int NOT NULL,
+--                                `author_id` int NOT NULL,
+--                                PRIMARY KEY (`book_id`,`author_id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+-- /*!40101 SET character_set_client = @saved_cs_client */;
+--
+-- --
+-- -- Dumping data for table `book_author`
+-- --
+--
+-- LOCK TABLES `book_author` WRITE;
+-- /*!40000 ALTER TABLE `book_author` DISABLE KEYS */;
+-- /*!40000 ALTER TABLE `book_author` ENABLE KEYS */;
+-- UNLOCK TABLES;
+--
+-- --
+-- -- Table structure for table `genre`
+-- --
+--
+-- DROP TABLE IF EXISTS `genre`;
+-- /*!40101 SET @saved_cs_client     = @@character_set_client */;
+-- /*!50503 SET character_set_client = utf8mb4 */;
+-- CREATE TABLE `genre` (
+--                          `genre_id` int NOT NULL AUTO_INCREMENT,
+--                          `genre_name` text NOT NULL,
+--                          PRIMARY KEY (`genre_id`)
+-- ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3;
+-- /*!40101 SET character_set_client = @saved_cs_client */;
+--
+-- --
+-- -- Dumping data for table `genre`
+-- --
+--
+-- LOCK TABLES `genre` WRITE;
+-- /*!40000 ALTER TABLE `genre` DISABLE KEYS */;
+-- INSERT INTO `genre` VALUES (1,'Биография'),(2,'Бестселлер'),(3,'Детектив'),(4,'Детская литература'),(5,'Драматургия'),(6,'Исторический роман'),(7,'Любовный роман'),(8,'Мистика'),(9,'Научная литература'),(10,'Новелла'),(11,'Повесть (рассказ)'),(12,'Поэзия'),(13,'Приключения'),(14,'Психология'),(15,'Сатира, юмор, ирония'),(16,'Сказка'),(17,'Трагедия'),(18,'Фантастика'),(19,'Философия'),(20,'Фэнтези'),(21,'Эпистолярный  роман'),(22,'Программирование'),(23,'Немецкий язык ');
+-- /*!40000 ALTER TABLE `genre` ENABLE KEYS */;
+-- UNLOCK TABLES;
+--
+-- --
+-- -- Table structure for table `publisher`
+-- --
+--
+-- DROP TABLE IF EXISTS `publisher`;
+-- /*!40101 SET @saved_cs_client     = @@character_set_client */;
+-- /*!50503 SET character_set_client = utf8mb4 */;
+-- CREATE TABLE `publisher` (
+--                              `publisher_id` int NOT NULL AUTO_INCREMENT,
+--                              `publisher_name` varchar(300) NOT NULL,
+--                              `address` varchar(300) NOT NULL,
+--                              PRIMARY KEY (`publisher_id`)
+-- ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
+-- /*!40101 SET character_set_client = @saved_cs_client */;
+--
+-- --
+-- -- Dumping data for table `publisher`
+-- --
+--
+-- LOCK TABLES `publisher` WRITE;
+-- /*!40000 ALTER TABLE `publisher` DISABLE KEYS */;
+-- INSERT INTO `publisher` VALUES (1,'Oxford University Press','NY'),(2,'Grand Central Publishing','Washington'),(3,'Simon & Schuster','Chicago'),(4,'Альфа-книга','125565, Москва, а/я 4'),(5,'АСТ','129085, Москва, Звездный бульвар, д. 21'),(6,'Росмэн','125124, Москва, а/я 62'),(7,'Бином','127018 г. Москва, ул.Сущевский вал, 49'),(8,'Гелеос','Москва, Партийный пер., д.1'),(9,'Дрофа','127018, Москва, Сущевский вал, 49'),(10,'Эксмо','127299, г. Москва, ул. Клары Цеткин, д.18/5'),(11,'Public Domain','Москва'),(12,'Мартин','Москва'),(13,'Слово ','Москва'),(14,'БОМБОРА','Москва'),(15,'Питер','Москва');
+-- /*!40000 ALTER TABLE `publisher` ENABLE KEYS */;
+-- UNLOCK TABLES;
+--
+-- --
+-- -- Table structure for table `role`
+-- --
+--
+-- DROP TABLE IF EXISTS `role`;
+-- /*!40101 SET @saved_cs_client     = @@character_set_client */;
+-- /*!50503 SET character_set_client = utf8mb4 */;
+-- CREATE TABLE `role` (
+--                         `role_id` bigint NOT NULL,
+--                         `role_name` varchar(100) NOT NULL,
+--                         PRIMARY KEY (`role_id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+-- /*!40101 SET character_set_client = @saved_cs_client */;
+--
+-- --
+-- -- Dumping data for table `role`
+-- --
+--
+-- LOCK TABLES `role` WRITE;
+-- /*!40000 ALTER TABLE `role` DISABLE KEYS */;
+-- /*!40000 ALTER TABLE `role` ENABLE KEYS */;
+-- UNLOCK TABLES;
+--
+-- --
+-- -- Table structure for table `user`
+-- --
+--
+-- DROP TABLE IF EXISTS `user`;
+-- /*!40101 SET @saved_cs_client     = @@character_set_client */;
+-- /*!50503 SET character_set_client = utf8mb4 */;
+-- CREATE TABLE `user` (
+--                         `user_id` int NOT NULL AUTO_INCREMENT,
+--                         `user_name` varchar(300) NOT NULL,
+--                         PRIMARY KEY (`user_id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+-- /*!40101 SET character_set_client = @saved_cs_client */;
+--
+-- --
+-- -- Dumping data for table `user`
+-- --
+--
+-- LOCK TABLES `user` WRITE;
+-- /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+-- /*!40000 ALTER TABLE `user` ENABLE KEYS */;
+-- UNLOCK TABLES;
+--
+-- --
+-- -- Table structure for table `user_roles`
+-- --
+--
+-- DROP TABLE IF EXISTS `user_roles`;
+-- /*!40101 SET @saved_cs_client     = @@character_set_client */;
+-- /*!50503 SET character_set_client = utf8mb4 */;
+-- CREATE TABLE `user_roles` (
+--                               `id` int NOT NULL,
+--                               `user_id` int NOT NULL,
+--                               `role_id` int NOT NULL,
+--                               PRIMARY KEY (`id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+-- /*!40101 SET character_set_client = @saved_cs_client */;
+--
+-- --
+-- -- Dumping data for table `user_roles`
+-- --
+--
+-- LOCK TABLES `user_roles` WRITE;
+-- /*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
+-- /*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
+-- UNLOCK TABLES;
+--
+-- --
+-- -- Table structure for table `vote`
+-- --
+--
+-- DROP TABLE IF EXISTS `vote`;
+-- /*!40101 SET @saved_cs_client     = @@character_set_client */;
+-- /*!50503 SET character_set_client = utf8mb4 */;
+-- CREATE TABLE `vote` (
+--                         `vote_id` bigint NOT NULL AUTO_INCREMENT,
+--                         `value` int DEFAULT '0',
+--                         `book_id` bigint NOT NULL,
+--                         `username` varchar(100) NOT NULL,
+--                         PRIMARY KEY (`vote_id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+-- /*!40101 SET character_set_client = @saved_cs_client */;
+--
+-- --
+-- -- Dumping data for table `vote`
+-- --
+--
+-- LOCK TABLES `vote` WRITE;
+-- /*!40000 ALTER TABLE `vote` DISABLE KEYS */;
+-- /*!40000 ALTER TABLE `vote` ENABLE KEYS */;
+-- UNLOCK TABLES;
+-- /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+--
+-- /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+-- /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+-- /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+-- /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+-- /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+-- /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
