@@ -32,7 +32,8 @@ public class Genre {
     @Column(name = "genre_name")
     private String genre_name;
 
-
-
-
+    @Override
+    public String toString() {
+        return genre_name;
+    }
 }

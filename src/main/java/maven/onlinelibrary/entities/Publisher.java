@@ -28,4 +28,9 @@ public class Publisher {
 
     @Column(name = "publisher_name")
     private String publisher_name;
+
+    @Override
+    public String toString() {
+        return publisher_name;
+    }
 }
