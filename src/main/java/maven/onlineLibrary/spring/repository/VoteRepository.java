@@ -1,4 +1,4 @@
-package maven.onlineLibrary.repository;
+package maven.onlineLibrary.spring.repository;
 
 import maven.onlineLibrary.entity.Vote;
 import org.springframework.data.jpa.repository.JpaRepository;
