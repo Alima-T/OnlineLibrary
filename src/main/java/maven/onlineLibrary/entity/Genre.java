@@ -1,15 +1,13 @@
-package maven.onlinelibrary.entities;
+package maven.onlineLibrary.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.GeneratorType;
 import org.hibernate.annotations.SelectBeforeUpdate;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * @Alima-T 13.09.2022

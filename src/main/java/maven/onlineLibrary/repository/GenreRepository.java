@@ -1,6 +1,6 @@
-package maven.onlinelibrary.repository;
+package maven.onlineLibrary.repository;
 
-import maven.onlinelibrary.entities.Vote;
+import maven.onlineLibrary.entity.Genre;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface VoteRepository extends JpaRepository<Vote, Long>{
+public interface GenreRepository extends JpaRepository<Genre, Long> {
 
 }

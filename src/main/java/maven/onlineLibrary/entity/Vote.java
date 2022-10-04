@@ -1,4 +1,4 @@
-package maven.onlinelibrary.entities;
+package maven.onlineLibrary.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package maven.onlinelibrary;
+package maven.onlineLibrary;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

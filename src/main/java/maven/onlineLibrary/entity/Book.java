@@ -1,10 +1,9 @@
-package maven.onlinelibrary.entities;
+package maven.onlineLibrary.entity;
 
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SelectBeforeUpdate;
-import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 
 import javax.persistence.*;
 

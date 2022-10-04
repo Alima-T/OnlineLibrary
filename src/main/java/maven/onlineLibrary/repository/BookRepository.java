@@ -1,11 +1,9 @@
-package maven.onlinelibrary.repository;
+package maven.onlineLibrary.repository;
 
-import maven.onlinelibrary.entities.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.awt.print.Book;
-import java.util.List;
 
 /**
  * @Alima-T 9/24/2022
