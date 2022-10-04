@@ -1,4 +1,4 @@
-package maven.onlineLibrary.repository;
+package maven.onlineLibrary.spring.repository;
 
 import maven.onlineLibrary.entity.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -15,5 +15,5 @@ import java.util.List;
 @Repository
 public interface AuthorRepository extends JpaRepository<Author,Long> {
 
-    List<Author> findAllByFioContainingIgnoreCaseOrderByFio(String fio);
+    List<Author> findAllByAuthorFullNameContainingIgnoreCaseOrderByAuthorFullName(String authorFullName);
 }
