@@ -13,7 +13,7 @@ import javax.persistence.*;
  * @Alima-T 13.09.2022
  */
 @Entity
-@Table(name = "зublisher", catalog = "library")
+@Table(name = "publisher", catalog = "library")
 @EqualsAndHashCode(of = "publisher_id")
 @Getter
 @Setter

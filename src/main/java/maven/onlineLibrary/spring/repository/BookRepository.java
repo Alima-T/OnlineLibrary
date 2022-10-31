@@ -1,6 +1,5 @@
 package maven.onlineLibrary.spring.repository;
 
-import maven.onlineLibrary.entity.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,7 +16,7 @@ import java.util.List;
 public interface BookRepository extends JpaRepository<Book,Long> {
     // поиск книг по названию или автору
     // если имя метода получается слишком длинным - можно использовать @Query с HQL
-    List<Book> findByNameContainingIgnoreCaseOrAuthorFullNameContainingIgnoreCaseOrderByName(String name, String authorFullName);
+    List<Book> findByBookNameContainingIgnoreCaseOrAuthorFullNameContainingIgnoreCaseOrderByBookName(String bookName, String authorFullName);
 
 }
 

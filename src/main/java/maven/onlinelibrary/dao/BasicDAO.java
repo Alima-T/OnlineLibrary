@@ -1,4 +1,4 @@
-package maven.onlinelibrary.dao;
+package maven.onlineLibrary.dao;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;

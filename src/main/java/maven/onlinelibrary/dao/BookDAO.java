@@ -1,13 +1,13 @@
-package maven.onlinelibrary.dao;
+package maven.onlineLibrary.dao;
 
-import maven.onlinelibrary.entities.Book;
+import maven.onlineLibrary.entity.Book;
 
 import java.util.List;
 
 /**
  * @Alima-T 9/24/2022
  */
-public interface BookDAO extends BasicDAO{
+public interface BookDAO extends BasicDAO<Book>{
 
     List<Book> getTopBooks (int limit);
 }

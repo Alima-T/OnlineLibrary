@@ -1,8 +1,10 @@
-package maven.onlinelibrary.dao;
+package maven.onlineLibrary.dao;
+
+import maven.onlineLibrary.entity.Publisher;
 
 /**
  * @Alima-T 9/24/2022
  */
-public interface PublisherDAO extends BasicDAO{
+public interface PublisherDAO extends BasicDAO<Publisher> {
 
 }
