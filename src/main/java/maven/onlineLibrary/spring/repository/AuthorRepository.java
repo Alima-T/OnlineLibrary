@@ -15,5 +15,6 @@ import java.util.List;
 @Repository
 public interface AuthorRepository extends JpaRepository<Author,Long> {
 
-    List<Author> findAllByAuthorFullNameContainingIgnoreCaseOrderByAuthorFullName(String authorFullName);
+    // на основании имени метода будет построен Hibernate запрос
+    List<Author> findAllByAuthorFullNameContainingIgnoreCaseOrderByAuthorFullName(String name);
 }

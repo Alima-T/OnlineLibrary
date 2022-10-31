@@ -11,8 +11,8 @@ import java.util.List;
  */
 
 @Repository
-public interface GenreRepository extends JpaRepository<Genre, Long> {
+public interface GenreRepository extends JpaRepository<Genre,Long> {
 
-    List<Genre> findAllByGenreNameContainingIgnoreCaseOrderByName(String name);
+    List<Genre> findAllByGenreNameContainingIgnoreCaseOrderByGenreName(String name);
 
 }

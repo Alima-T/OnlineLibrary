@@ -1,9 +1,7 @@
-package maven.onlinelibrary.dao;
+package maven.onlineLibrary.dao;
 
-import maven.onlinelibrary.entities.Author;
 
-import java.util.ArrayList;
-import java.util.List;
+import maven.onlineLibrary.entity.Author;
 
 /**
  * @Alima-T 9/18/2022
